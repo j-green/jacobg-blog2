@@ -15,5 +15,5 @@ if($query) {
 }
 
 $connection->close();
-
+    
  

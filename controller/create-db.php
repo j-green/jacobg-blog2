@@ -9,7 +9,7 @@ if ($connection->connect_error) {
 
 $exists = $connection->select_db($database);
 
-if(!$exists) {
+if($exists) {
     $query = $connection->query("CREATE DATABASE $database");
     
 if($query) {
