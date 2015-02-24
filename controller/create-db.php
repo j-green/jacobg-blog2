@@ -1,5 +1,5 @@
 <?php
-require_once("../model/database.php");
+require_once("/../model/database.php");
 
 $connection = new mysqli($host, $username, $password);
 
@@ -24,7 +24,7 @@ else{
 $query = $connection->query("CREATE TABLE posts ("
         ."id int(11) NOT NULL AUTO_INCREMENT,"
         ."title varchar(225) NOT NULL,"
-        ."post tex NOT NULL,"
+        ."post text NOT NULL,"
         ."PRIMARY KEY (id))");
 
 if($query) {
