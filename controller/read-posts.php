@@ -11,7 +11,8 @@ while($row = mysqli_fetch_array($result)) {
     echo "<h2>" . $row['title'] . "</h2>";
     echo "<br />";
     echo "<p>" . $row['post'] . "<h1>";
-    echo
+    echo "<br/>";
+    echo "</div";
 }
         
 }
