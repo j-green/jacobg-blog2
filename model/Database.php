@@ -1,6 +1,7 @@
 <?php
 
 class Database {
+    //makes all your information private
 
     private $connection;
     private $host;
@@ -8,7 +9,7 @@ class Database {
     private $password;
     private $database;
     public $error;
-
+//constructs the username and password
     public function __construct($host, $username, $password, $database) {
         $this->host = $host;
         $this->username = $username;
@@ -16,14 +17,14 @@ class Database {
         $this->database = $database;
 
     $this->connection = new mysqli($host, $username, $password);
-    
+    //tells the code if the code has an error say error
     if($this->connection->connect_error){
         die("<p>Error: " . $this->connection->connect_error . "</p>");
     }
     
     $exists = $this->connection->select_db($database);
-    
-    if (!exists){
+    //tells the code if the database exists say successfully created 
+       if (!exists){
         $query = $this->connection->query("CREATE DATABASE $database");
         
         if ($query) {

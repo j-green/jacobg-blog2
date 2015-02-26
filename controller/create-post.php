@@ -7,8 +7,8 @@ $title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);
 $post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 
 $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
-
-if($query) {
+//tells when the post is submited to say that it is
+ if($query) {
     echo"<p>Successfully inserted post: $title</p>";
 } else{
     echo "<p>" . $_SESSION["connection"]->error .  "</p>";
